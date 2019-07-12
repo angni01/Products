@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+div.card-header {
+ font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+img{
+  width: 50px;
+  margin: 2px;
+}
+table{
+  border: 1px solid black;
+}
+td{
+  padding: 20px;
+}

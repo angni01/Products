@@ -1,0 +1,40 @@
+
+
+<div class="container">
+    <br />
+    <h1 class="text-center">{{title}}</h1>
+    <table class="table">
+        <thead>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Available</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Change Rating</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>
+                    <img src={{product.imageUrl}}>
+                </td>
+                <td>
+                    {{product.productName | uppercase}}
+                </td>
+                <td>
+                    {{product.productCode}}
+                </td>
+                <td>
+                    {{product.releaseDate }}
+                </td>
+                <td>
+                    {{product.price | currency: 'PHP' : 'symbol' : '1.2-2'}}
+                </td>
+                <td>
+                    {{product.starRating}}
+                </td>
+                <td><app-star-rating [productId]='product.productId' [rating]='product.starRating' (starRatingChange)='starRatingChanged($event)'></app-star-rating></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
